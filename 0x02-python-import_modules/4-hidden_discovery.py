@@ -4,7 +4,7 @@ import hidden_4
 
 def main():
     names = dir(hidden_4)
-    for name in enumerate(names):
+    for name in names:
         if name[0:2] != "__":
             print("{}".format(name))
 
