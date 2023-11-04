@@ -14,7 +14,7 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *current = *head;
-	int number[1024];
+	int number[2084];
 	int i = 0, j;
 
 	if (*head == NULL)
