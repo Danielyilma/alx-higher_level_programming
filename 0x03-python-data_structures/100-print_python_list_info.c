@@ -1,5 +1,11 @@
 #include "listobject.h"
 #include "object.h"
+
+/**
+ * print_python_list_info - info about python list
+ * @p: python object
+ *
+*/
 void print_python_list_info(PyObject *p)
 {
 	int i, l;
