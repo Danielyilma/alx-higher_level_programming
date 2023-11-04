@@ -2,6 +2,8 @@
 
 
 def no_c(my_string):
-    my_string.remove('c')
-    return my_string
-
+    list = ""
+    for i in my_string:
+        if i not in "cC":
+            list += i
+    return list
