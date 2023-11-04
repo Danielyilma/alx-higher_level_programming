@@ -17,6 +17,9 @@ int is_palindrome(listint_t **head)
 	int number[1024];
 	int i = 0, j;
 
+	if (*head == NULL)
+	return (1);
+
 	while (current != NULL)
 	{
 		number[i] = current->n;
