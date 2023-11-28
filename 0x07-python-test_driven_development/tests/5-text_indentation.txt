@@ -1,0 +1,34 @@
+
+
+text_indentation test cases
+
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+case 1:
+
+>>> text_indentation("hello?world.of:coding")
+hello?
+<BLANKLINE>
+world.
+<BLANKLINE>
+of:
+<BLANKLINE>
+coding
+
+case 2:
+
+>>> text_indentation(12)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+case 3:
+
+>>> text_indentation(" player of the month.")
+player of the month.
+<BLANKLINE> 
+
+case 4:
+
+>>> text_indentation("      space ")
+space

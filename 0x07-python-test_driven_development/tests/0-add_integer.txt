@@ -4,45 +4,63 @@ addition  test cases
 
 >>> add_integer = __import__('0-add_integer').add_integer
 
->>> try:
-...     print(add_integer(1, "pp"))
-... except Exception as e:
-...     print(e)
-b must be an integer
+case 1:
+
+>>> add_integer(10, 12)
+22
+
+case 2:
+
+>>> add_integer(-1, 1)
+0
+
+case 3:
+
+>>> add_integer(None)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+case 4:
+
+>>> add_integer("e", 12)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
 
 
->>> print(add_integer(100, -2))
-98
+case 5:
 
+>>> add_integer(1, "pp")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
 
->>> print(add_integer(2))
+case 6:
+
+>>> add_integer("dd", "dd")
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+case 7:
+
+>>> add_integer(2)
 100
 
+case 8:
 
->>> print(add_integer(100.3, -2))
+>>> add_integer(100.3, -2)
 98
 
+case 9:
 
->>> try:
-...     print(add_integer("ww", 3))
-... except Exception as e:
-...     print(e)
-a must be an integer
-
-
->>> try:
-...     print(add_integer("ff", "pp"))
-... except Exception as e:
-...     print(e)
-a must be an integer
-
-
->>> print(add_integer(-1))
+>>> add_integer(-1)
 97
 
+case 10:
 
->>> try:
-...     print(add_integer("ff"))
-... except Exception as e:
-...     print(e)
-a must be an integer
+>>> add_integer('', "")
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer

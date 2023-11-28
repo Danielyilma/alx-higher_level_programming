@@ -38,4 +38,3 @@ def matrix_divided(matrix, div):
         temp = []
 
     return result
-
