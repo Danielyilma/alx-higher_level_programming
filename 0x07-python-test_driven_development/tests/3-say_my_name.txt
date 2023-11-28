@@ -1,0 +1,25 @@
+
+
+usage 3-say_may_name
+
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+test case 1:
+>>> say_my_name("first", "last")
+My name is first last
+
+test case 2:
+>>> say_my_name("", "")
+My name is  
+
+test case 3:
+>>> say_my_name("  ", "  ")
+My name is      
+
+test case 4:
+>>> say_my_name(12, "last")
+Traceback (most recent call last):
+    ...
+TypeError: first name must be a string
+
+test
