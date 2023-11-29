@@ -4,6 +4,7 @@
 implementing say_my_name function
 '''
 
+
 def say_my_name(first_name, last_name=""):
     '''
     prints the fullname of a person

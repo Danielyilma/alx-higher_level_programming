@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+'''printing a square'''
+
 
 def print_square(size):
+    ''' printing square with the given size with # chracter'''
 
     if type(size) is float:
         if size < 0:
@@ -15,4 +18,3 @@ def print_square(size):
         for j in range(size):
             print("#", end="")
         print()
-
