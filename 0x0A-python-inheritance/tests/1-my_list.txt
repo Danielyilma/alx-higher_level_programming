@@ -1,0 +1,21 @@
+
+>>> MyList = __import__('1-my_list').MyList
+
+case 1:
+
+>>> l = MyList()
+>>> l.append(10)
+>>> l.append(2)
+>>> l.append(4)
+>>> l.append(7)
+
+
+>>> MyList.print_sorted(l)
+[2, 4, 7, 10]
+
+>>> print(l)
+[10, 2, 4, 7]
+>>> MyList.print_sorted(l)
+[2, 4, 7, 10]
+>>> print(l)
+[10, 2, 4, 7]
