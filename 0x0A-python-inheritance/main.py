@@ -1,7 +1,17 @@
 #!/usr/bin/python3
-Square = __import__('11-square').Square
+Rectangle = __import__('8-rectangle').Rectangle
 
-s = Square(13)
+r = Rectangle(3, 5)
 
-print(s.__str__())
-print(s.area())
+print(r)
+print(dir(r))
+
+try:
+    print("Rectangle: {} - {}".format(r.width, r.height))
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
+
+try:
+    r2 = Rectangle(4, True)
+except Exception as e:
+    print("[{}] {}".format(e.__class__.__name__, e))
