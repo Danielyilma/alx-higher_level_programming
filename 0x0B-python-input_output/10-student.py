@@ -14,6 +14,8 @@ class Student:
         if type(attr) is list:
             dic = {}
             for key in attr:
+                if not hasattr(self, key):
+                    continue
                 dic[key] = self.__dict__[key]
             return dic
         return self.__dict__
