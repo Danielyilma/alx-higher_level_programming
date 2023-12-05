@@ -1,35 +1,16 @@
 #!/usr/bin/python3
-""" My class module
 """
+12-main
+"""
+pascal_triangle = __import__('12-pascal_triangle').pascal_triangle
 
-class MyClass:
-    """ My class
+def print_triangle(triangle):
     """
+    Print the triangle
+    """
+    for row in triangle:
+        print("[{}]".format(",".join([str(x) for x in row])))
 
-    score = 0
 
-    def __init__(self, name, number = 4):
-        self.__name = name
-        self.number = number
-        self.is_team_red = (self.number % 2) == 0
-
-    def win(self):
-        self.score += 1
-
-    def lose(self):
-        self.score -= 1
-
-    def __str__(self):
-        return "[MyClass] {} - {:d} => {:d}".format(self.__name, self.number, self.score)
-    
-
-class_to_json = __import__('8-class_to_json').class_to_json
-
-m = MyClass("John")
-m.win()
-print(type(m))
-print(m)
-
-mj = class_to_json(m)
-print(type(mj))
-print(mj)
+if __name__ == "__main__":
+    print_triangle(pascal_triangle(5))

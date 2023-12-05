@@ -20,7 +20,7 @@ def combination(n, r):
 def pascal_triangle(n):
     '''the pascal tringle of given n'''
     triangle = []
-    for i in range(n + 1):
+    for i in range(n):
         temp = []
         for j in range(0, i + 1):
             temp.append(combination(i, j))
