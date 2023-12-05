@@ -1,28 +1,35 @@
 #!/usr/bin/python3
-load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
+""" My class module
+"""
 
-filename = "my_list.json"
-my_list = load_from_json_file(filename)
-print(my_list)
-print(type(my_list))
+class MyClass:
+    """ My class
+    """
 
-filename = "my_dict.json"
-my_dict = load_from_json_file(filename)
-print(my_dict)
-print(type(my_dict))
+    score = 0
 
-try:
-    filename = "my_set_doesnt_exist.json"
-    my_set = load_from_json_file(filename)
-    print(my_set)
-    print(type(my_set))
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+    def __init__(self, name, number = 4):
+        self.__name = name
+        self.number = number
+        self.is_team_red = (self.number % 2) == 0
 
-try:
-    filename = "my_set.json"
-    my_fake = load_from_json_file(filename)
-    print(my_fake)
-    print(type(my_fake))
-except Exception as e:
-    print("[{}] {}".format(e.__class__.__name__, e))
+    def win(self):
+        self.score += 1
+
+    def lose(self):
+        self.score -= 1
+
+    def __str__(self):
+        return "[MyClass] {} - {:d} => {:d}".format(self.__name, self.number, self.score)
+    
+
+class_to_json = __import__('8-class_to_json').class_to_json
+
+m = MyClass("John")
+m.win()
+print(type(m))
+print(m)
+
+mj = class_to_json(m)
+print(type(mj))
+print(mj)
