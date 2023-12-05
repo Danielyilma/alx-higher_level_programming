@@ -1,4 +1,4 @@
-#!.usr/bin/python3
+#!/usr/bin/python3
 '''converting to json file'''
 import json
 
