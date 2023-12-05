@@ -4,8 +4,8 @@
 
 def read_file(filename=""):
     '''reading from a file implementation'''
-    with open(filename, encoding="utf-8") as f:
-
-        for line in f:
+    with open(filename, "r", encoding="UTF-8") as f:
+        line = f.readline()
+        while line:
             print(line, end="")
-        print()
+            line = f.readline()
