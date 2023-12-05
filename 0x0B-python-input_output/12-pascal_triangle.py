@@ -3,6 +3,7 @@
 
 
 def factorial(n):
+    '''computes factorial of n'''
     if n == 0:
         return 1
     num = 1
@@ -12,10 +13,12 @@ def factorial(n):
 
 
 def combination(n, r):
+    '''finds combination of (n, r)'''
     return (factorial(n) // (factorial(r) * factorial(n - r)))
 
 
 def pascal_tringle(n):
+    '''the pascal tringle of given n'''
     triangle = []
     for i in range(n + 1):
         temp = []
