@@ -17,7 +17,7 @@ def combination(n, r):
     return (factorial(n) // (factorial(r) * factorial(n - r)))
 
 
-def pascal_tringle(n):
+def pascal_triangle(n):
     '''the pascal tringle of given n'''
     triangle = []
     for i in range(n + 1):
