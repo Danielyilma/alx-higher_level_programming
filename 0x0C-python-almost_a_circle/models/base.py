@@ -9,6 +9,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
+        '''initializing the base object'''
         if id is not None:
             self.id = id
         else:
@@ -17,12 +18,14 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        '''changing object data string to json file''' 
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
+        '''saving to a file'''
         filename = cls.__name__ + ".json"
         json_serial = []
 
@@ -40,12 +43,14 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        '''changing from json data to python object'''
         if json_string is None or json_string == "":
             return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
+        '''creating object from dictionary'''
         from models.rectangle import Rectangle
         from models.square import Square
 
@@ -61,6 +66,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        '''loading data from json file'''
         filename = cls.__name__ + ".json"
         list_obj = []
 
@@ -77,6 +83,7 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
+        '''saving data to csv file'''
         filename = cls.__name__ + ".csv"
         list_of_dict = [dic.to_dictionary() for dic in list_objs]
 
@@ -94,6 +101,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
+        '''loading from csv file'''
         filename = cls.__name__ + ".csv"
         list_of_obj = []
 
