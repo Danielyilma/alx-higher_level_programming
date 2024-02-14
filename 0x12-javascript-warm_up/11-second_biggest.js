@@ -1,6 +1,6 @@
 #!/usr/bin/node
 const { argv } = require('process');
-let list = []
+const list = [];
 
 if (argv.length === 2 || argv.length === 3) {
   console.log(0);
