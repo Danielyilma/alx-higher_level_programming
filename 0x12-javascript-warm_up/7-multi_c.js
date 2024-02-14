@@ -1,13 +1,12 @@
 #!/usr/bin/node
+const { argv } = require('process');
+let iter = parseInt(argv[2]);
 
-const argv = require('process').argv;
-
-const numOfOccurrences = parseInt(argv[2]);
-
-if (isNaN(numOfOccurrences)) {
+if (isNaN(iter)) {
   console.log('Missing number of occurrences');
 } else {
-  for (let i = 0; i < numOfOccurrences; i++) {
+  while (iter > 0) {
     console.log('C is fun');
+    iter--;
   }
 }

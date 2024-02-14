@@ -1,17 +1,18 @@
 #!/usr/bin/node
+const { argv } = require('process');
+let firstLar = argv[2];
+let secondLar;
+let val;
 
-const argv = require('process').argv;
-
-const nums = [];
-
-for (let i = 2; i < argv.length; i++) {
-  nums.push(parseInt(argv[i]));
-}
-
-nums.sort((a, b) => a - b);
-
-if (nums.length < 2) {
-  console.log('0');
+if (argv.length === 2 || argv.length === 3) {
+  console.log(0);
 } else {
-  console.log(nums[nums.length - 2]);
+  for (let i = 2; i < argv.length; i++) {
+    val = parseInt(argv[i]);
+    if (val > firstLar) {
+      secondLar = firstLar;
+      firstLar = val;
+    }
+  }
+  console.log(secondLar);
 }
