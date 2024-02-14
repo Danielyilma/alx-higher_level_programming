@@ -8,7 +8,7 @@ if (isNaN(iter)) {
   for (let i = 0; i < iter; i++) {
     let temp = '';
     for (let j = 0; j < iter; j++) {
-      temp += 'x';
+      temp += 'X';
     }
     console.log(temp);
   }
