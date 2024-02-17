@@ -4,8 +4,8 @@ creating city table in database and displaying the rows
 '''
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_city import Base, City
-from model_state import State
+from model_state import Base, State
+from model_city import City
 import sys
 
 
@@ -18,7 +18,7 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
     Base.metadata.create_all(engine)
-    results = session.query(State, City).join(City).order_by(City.id).all()
+    results = session.query(State, City).join(City).order_by(City.id.asc()).all()
 
     for state, city in results:
         print(
