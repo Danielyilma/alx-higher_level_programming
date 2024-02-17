@@ -18,7 +18,8 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
     Base.metadata.create_all(engine)
-    results = session.query(State, City).join(City).order_by(City.id.asc()).all()
+    results = session.query(State, City).join(City)\
+        .order_by(City.id.asc()).all()
 
     for state, city in results:
         print(
