@@ -18,6 +18,7 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
     state1 = State(name='Louisiana')
+    session.add(state1)
     session.commit()
 
     print(state1.id)

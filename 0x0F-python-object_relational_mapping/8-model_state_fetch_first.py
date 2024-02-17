@@ -22,7 +22,7 @@ def main():
     if row:
         print("{}: {}".format(row.id, row.name))
     else:
-        print()
+        print("Nothing")
 
 
 if __name__ == '__main__':
