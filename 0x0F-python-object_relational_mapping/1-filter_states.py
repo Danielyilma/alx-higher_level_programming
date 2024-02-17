@@ -14,7 +14,7 @@ def main():
         database=sys.argv[3]
     )
     cursor = conn.cursor()
-    statement = "select * from states where name like 'N%' order by id asc"
+    statement = "select * from states where name like 'N%' order by states.id asc"
 
     cursor.execute(statement)
 
