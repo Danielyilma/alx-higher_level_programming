@@ -17,10 +17,10 @@ def main():
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    session.add(
-        State(name='Louisiana')
-    )
+    state1 = State(name='Louisiana')
     session.commit()
+
+    print(state1.id)
     session.close()
 
 

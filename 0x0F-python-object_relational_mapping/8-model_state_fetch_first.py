@@ -21,6 +21,8 @@ def main():
 
     if row:
         print("{}: {}".format(row.id, row.name))
+    else:
+        print()
 
 
 if __name__ == '__main__':
