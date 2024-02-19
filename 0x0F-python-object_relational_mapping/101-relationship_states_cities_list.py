@@ -2,7 +2,7 @@
 '''
 quering data based on relationship
 '''
-from sqlalchemy import create_engine, and_
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from relationship_city import City
 from relationship_state import State, Base
@@ -20,7 +20,7 @@ def main():
     session = Session()
 
     results = session.query(State).join(City).\
-        order_by(State.id, City.id).all()
+        order_by(State.id.asc(), City.id.asc()).all()
 
     for state in results:
         print(f'{state.id}: {state.name}')
