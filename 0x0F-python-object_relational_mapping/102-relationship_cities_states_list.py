@@ -22,7 +22,7 @@ def main():
     results = session.query(City).order_by(City.id).all()
 
     for city in results:
-        print(f'{city.id} : {city.name} -> {city.state.name}')
+        print(f'{city.id}: {city.name} -> {city.state.name}')
 
 
 if __name__ == '__main__':
