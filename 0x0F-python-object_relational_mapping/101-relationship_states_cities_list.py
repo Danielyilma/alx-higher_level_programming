@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-
+quering data based on relationship
 '''
 from sqlalchemy import create_engine, and_
 from sqlalchemy.orm import sessionmaker
@@ -10,6 +10,7 @@ import sys
 
 
 def main():
+    '''main function that run when it is not imported'''
     engine = create_engine(
         'mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
             sys.argv[1], sys.argv[2], sys.argv[3]
