@@ -22,9 +22,9 @@ def main():
     results = session.query(State).order_by(State.id).all()
 
     for state in results:
-        print(f'{state.id}: {state.name}')
+        print("{}: {}".format(state.id, state.name))
         for city in state.cities:
-            print(f'    {city.id}: {city.name}')
+            print('    {}: {}'.format(city.id, city.name))
 
 
 if __name__ == '__main__':
