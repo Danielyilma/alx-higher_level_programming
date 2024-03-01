@@ -11,12 +11,15 @@ def main():
     )
     r = requests.get(url)
     commits = r.json()
-    for i in range(10):
-        print('{}: {}'.format(
-            commits[i].get('commit').get('tree').get('sha'),
-            commits[i].get('commit').get('author').get('name')
-        ))
 
+    try:
+        for i in range(10):
+            print('{}: {}'.format(
+                commits[i].get('sha'),
+                commits[i].get('commit').get('author').get('name')
+            ))
+    except Exception as e:
+        pass
 
 if __name__ == '__main__':
     main()
