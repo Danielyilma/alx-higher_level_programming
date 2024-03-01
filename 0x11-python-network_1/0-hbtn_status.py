@@ -11,7 +11,7 @@ def main():
     with urllib.request.urlopen(req) as response:
         data = response.read()
         print('''Body response:\n    - type: {}\n    - \
-content: {}\n    - utf8 content {}'''.format(
+content: {}\n    - utf8 content: {}'''.format(
             type(data), data, data.decode("utf-8")
         ))
 
