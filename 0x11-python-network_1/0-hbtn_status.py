@@ -8,7 +8,7 @@ def main():
     with request.urlopen(url) as response:
         data = response.read()
         print('''Body response:\n\t- type: {}\n\t- \
-    content: {}\n\t- utf-8 content: {}'''.format(
+content: {}\n\t- utf-8 content: {}'''.format(
             type(data), data, data.decode("utf-8")
         ))
 
