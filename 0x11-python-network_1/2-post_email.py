@@ -10,7 +10,7 @@ param = {
 }
 
 data = parse.urlencode(param).encode('ascii')
-url = request.Request(url, param)
+url = request.Request(url, data)
 
 with request.urlopen(url) as response:
     print(response.read().decode('utf-8'))
