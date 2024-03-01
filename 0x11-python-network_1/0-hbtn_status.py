@@ -7,7 +7,8 @@ def main():
     '''This Python script is fetching datausing the
      `urlopen` function from the `urllib.request` module.'''
     url = "https://alx-intranet.hbtn.io/status"
-    with request.urlopen(url) as response:
+    req = request.Request(url)
+    with request.urlopen(req) as response:
         data = response.read()
         print('''Body response:\n    - type: {}\n    - \
 content: {}\n    - utf-8 content: {}'''.format(
