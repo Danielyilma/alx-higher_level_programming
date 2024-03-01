@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 '''post an email adderess to the given url'''
-import urllib.request
-import urllib.parse
+import urllib
 import sys
 
 

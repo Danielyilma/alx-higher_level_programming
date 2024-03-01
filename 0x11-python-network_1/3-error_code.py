@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''handing http responses'''
-import urllib.request
+import urllib
 import sys
 
 url = sys.argv[1]

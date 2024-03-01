@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''getting the value of the HTTP responce header'''
-import urllib.request
+import urllib
 import sys
 
 

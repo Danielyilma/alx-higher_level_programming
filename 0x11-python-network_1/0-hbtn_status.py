@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''fetching data from a url'''
-import urllib.request
+import urllib
 
 url = "https://alx-intranet.hbtn.io/status"
 with urllib.request.urlopen(url) as response:
