@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''post an email adderess to the given url'''
-import urllib
+from urllib import request, parse
 import sys
 
 
@@ -9,8 +9,8 @@ param = {
     'email': sys.argv[2]
 }
 
-data = urllib.parse.urlencode(param).encode('ascii')
-url = urllib.request.Request(url, param)
+data = parse.urlencode(param).encode('ascii')
+url = request.Request(url, param)
 
-with urllib.request.urlopen(url) as response:
+with request.urlopen(url) as response:
     print(response.read().decode('utf-8'))

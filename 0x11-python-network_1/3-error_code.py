@@ -1,14 +1,19 @@
 #!/usr/bin/python3
 '''handing http responses'''
-import urllib
+from urllib import request, error
 import sys
 
-url = sys.argv[1]
 
-try:
-    with urllib.request.urlopen(url) as response:
-        data = response.read()
-        print(data.decode('utf-8'))
+def main():
+    url = sys.argv[1]
 
-except urllib.error.URLError as e:
-    print('Error code: {}'.format(e.code))
+    try:
+        with urllib.request.urlopen(url) as response:
+            data = response.read()
+            print(data.decode('utf-8'))
+
+    except urllib.error.URLError as e:
+        print('Error code: {}'.format(e.code))
+
+if __name__ == '__main__':
+    main()
