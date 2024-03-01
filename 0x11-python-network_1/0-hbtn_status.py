@@ -1,14 +1,14 @@
 #!/usr/bin/python3
 '''fetching data from a url'''
-from urllib import request
+import urllib.request
 
 
 def main():
     '''This Python script is fetching datausing the
      `urlopen` function from the `urllib.request` module.'''
     url = "https://alx-intranet.hbtn.io/status"
-    req = request.Request(url)
-    with request.urlopen(req) as response:
+    req = urllib.request.Request(url)
+    with urllib.request.urlopen(req) as response:
         data = response.read()
         print('''Body response:\n    - type: {}\n    - \
 content: {}\n    - utf-8 content: {}'''.format(
