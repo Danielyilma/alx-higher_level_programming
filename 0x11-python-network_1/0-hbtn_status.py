@@ -10,8 +10,8 @@ def main():
     req = urllib.request.Request(url)
     with urllib.request.urlopen(req) as response:
         data = response.read()
-        print('''Body response:\n\t- type: {}\n\t- \
-content: {}\n\t- utf8 content {}'''.format(
+        print('''Body response:\n    - type: {}\n    - \
+content: {}\n    - utf8 content {}'''.format(
             type(data), data, data.decode("utf-8")
         ))
 
