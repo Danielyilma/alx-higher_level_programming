@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 '''getting the value of the HTTP responce header'''
-from urllib import request
+import urllib.request
 import sys
+
 
 def main():
     """
@@ -9,9 +10,9 @@ def main():
     the value of the "X-Request-Id" header from the response.
     """
     url = sys.argv[1]
-    req = request.Request(url)
-    with request.urlopen(req) as response:
-        print(dict(response.headers).get("X-Request-Id"))
+    req = urllib.request.Request(url)
+    with urllib.request.urlopen(req) as response:
+        print(response.headers.get("X-Request-Id"))
 
 
 if __name__ == '__main__':
