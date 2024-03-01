@@ -3,6 +3,7 @@
 import requests
 import sys
 
+
 def main():
     url = sys.argv[1]
     r = requests.get(url)
