@@ -13,5 +13,6 @@ def main():
     else:
         print(r.content.decode('utf-8'))
 
+
 if __name__ == '__main__':
     main()
