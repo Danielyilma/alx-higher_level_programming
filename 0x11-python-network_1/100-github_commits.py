@@ -1,9 +1,11 @@
 #!/usr/bin/python3
+'''getting a commit from github api'''
 import requests
 import sys
 
 
 def main():
+    '''main function'''
     url = 'https://api.github.com/repos/{}/{}/commits'.format(
         sys.argv[2], sys.argv[1]
     )
