@@ -9,8 +9,8 @@ def main():
     the value of the "X-Request-Id" header from the response.
     """
     url = sys.argv[1]
-    url = request.Request(url)
-    with request.urlopen(url) as response:
+    req = request.Request(url)
+    with request.urlopen(req) as response:
         print(response.headers.get("X-Request-Id"))
 
 
