@@ -17,7 +17,7 @@ def main():
         if len(json) == 0:
             print('No result')
         else:
-            print(f'[{json.get('id')}] {json.get('name')}')
+            print('[{}] {}'.format(json.get('id'), json.get('name')))
     except requests.exceptions.JSONDecodeError as e:
         print('Not a valid JSON')
 
