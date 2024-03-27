@@ -10,14 +10,14 @@ request('https://swapi-api.alx-tools.com/api/films/' + argv[2], (err, response, 
   }
 
   const data = JSON.parse(body);
-    data.characters.forEach(link => {
-        request(link, (err, response, body) => {
-            if (err) {
-                console.log(err);
-                return;
-            }
-            data2 = JSON.parse(body);
-            console.log(data2.name)
-        });
+  data.characters.forEach(link => {
+    request(link, (err, response, body) => {
+      if (err) {
+        console.log(err);
+        return;
+      }
+      const data2 = JSON.parse(body);
+      console.log(data2.name);
     });
   });
+});
