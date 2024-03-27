@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const { argv } = require('process');
-const { request } = require('request');
+const request = require('request');
 
 request(argv[2], (error, response, body) => {
   if (error) {
