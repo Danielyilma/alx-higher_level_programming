@@ -1,0 +1,2 @@
+
+GET https://hellosalut.stefanbohacek.dev/?lang=fr
